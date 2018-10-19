@@ -124,6 +124,8 @@
 {% endblock header %}
 
 {% block content %}
+    <div id="codefund_ad"></div>
+
     <!-- Post Content -->
     <article>
         {{ article.content }}
@@ -134,8 +136,6 @@
             <p>tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
         </div>
     {% endif %}
-
-    <div id="codefund_ad"></div>
 
     {% include 'sharing.html' %}
     <hr>
